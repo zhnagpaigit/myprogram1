@@ -1,0 +1,228 @@
+
+.clearfix {
+  *zoom: 1;
+  margin-top: 60px;
+}	
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@keyframes unselected {
+  0% { box-shadow: 0 0 0 4px #daa505; }
+  50% { transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #fff; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #fff; }
+}
+@-o-keyframes unselected {
+  0% { box-shadow: 0 0 0 4px #daa505; }
+  50% { -o-transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #fff; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #fff; }
+}
+@-ms-keyframes unselected {
+  0% { box-shadow: 0 0 0 4px #daa505; }
+  50% { width: 45%; height: 45%; opacity: 0.8; box-shadow: 0 0 0 4px #fff; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #fff; }
+}
+@-moz-transition unselected {
+  0% { box-shadow: 0 0 0 4px #daa505; }
+  50% { -moz-transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #fff; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #fff; }
+}
+@-webkit-keyframes unselected {
+  0% { box-shadow: 0 0 0 4px #daa505; }
+  50% { -webkit-transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #fff; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #fff; }
+}
+.sel-pic{
+	margin-top: 20px;
+}
+.sel-pic li {
+  position: relative;
+  margin: 2px;
+  width: 31.9999%;
+  float: left;
+  height: 120px;
+ 
+}
+.sel-pic li img{
+  position: absolute;
+  margin: 0;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%;
+  height: 120px;
+  
+
+  cursor: pointer;
+  animation:        unselected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -o-animation:     unselected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -ms-animation:    unselected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -moz-animation:   unselected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -webkit-animation: unselected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+.sel-pic li:before {
+  content: "\2714";
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background:  #daa505;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  z-index: 10;
+  opacity: 0;
+  transition:         0.3s linear;
+  -o-transition:      0.3s linear;
+  -ms-transition:     0.3s linear;
+  -moz-transition:    0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -o-user-select:      none;
+  -moz-user-select:    none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.sel-pic li.selected:before {
+  opacity: 1;
+}
+
+/* img selection */
+
+.sel-pic li.selected img {
+  box-shadow: 0 0 0 4px #daa505;
+  animation:        selected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -o-animation:     selected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -ms-animation:    selected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -moz-animation:   selected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  -webkit-animation: selected 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+
+@keyframes selected {
+  0% { border-color: #fff; }
+  50% { transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #daa505; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #daa505; }
+}
+@-o-keyframes selected {
+  0% { box-shadow: 0 0 0 4px #fff; }
+  50% { -o-transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #daa505; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #daa505; }
+}
+@-ms-keyframes selected {
+  0% { box-shadow: 0 0 0 4px #fff; }
+  50% { width: 45%; height: 45%; opacity: 0.8; box-shadow: 0 0 0 4px #daa505; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #daa505; }
+}
+@-moz-transition selected {
+  0% { box-shadow: 0 0 0 4px #fff; }
+  50% { -moz-transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #daa505; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #daa505; }
+}
+@-webkit-keyframes selected {
+  0% { box-shadow: 0 0 0 4px #fff; }
+  50% { -webkit-transform: scale(0.5); opacity: 0.8; box-shadow: 0 0 0 4px #daa505; }
+  80%,100% { width: 100%; height: 100%; box-shadow: 0 0 0 4px #daa505; }
+}
+
+/* button */
+
+button {
+  height: 45px;
+  margin: 0 7px;
+  padding: 5px 0;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+button.select {
+  float: left;
+  background: #eb0000;
+  cursor: pointer;
+  width: 150px;
+}
+
+button.select:before, button.select:after {
+  position: absolute;
+  display: block;
+  content:  '全选';
+  width: 150px;
+  text-align: center;
+  transition:         0.1s linear;
+  -o-transition:      0.1s linear;
+  -ms-transition:     0.1s linear;
+  -moz-transition:    0.1s linear;
+  -webkit-transition: 0.1s linear;
+}
+
+button.select:after {
+  content:  '取消选择';
+  margin-top: 18px;
+  opacity: 0;
+}
+
+button.select.selected:before {
+  transform:         translate(0,-38px);
+  -o-transform:      translate(0,-38px);
+  -ms-transform:     translate(0,-38px);
+  -moz-transform:    translate(0,-38px);
+  -webkit-transform: translate(0,-38px);
+  opacity: 0;
+}
+
+button.select.selected:after {
+  transform:         translate(0,-38px);
+  -o-transform:      translate(0,-38px);
+  -ms-transform:     translate(0,-38px);
+  -moz-transform:    translate(0,-38px);
+  -webkit-transform: translate(0,-38px);
+  opacity: 1;
+}
+
+button.send {
+  float: right;
+  background: #aaa;
+  padding: 0px 15px;
+  transition:         0.3s linear;
+  -o-transition:      0.3s linear;
+  -ms-transition:     0.3s linear;
+  -moz-transition:    0.3s linear;
+  -webkit-transition: 0.3s linear;
+}
+
+button.send.selected {
+  background: #daa505;
+  cursor: pointer;
+}
+
+button.send:after {
+  position: absolute;
+  right: -11px;
+  content:  attr(data-counter);
+  padding: 5px 8px;
+  margin: -29px 0 0 0px;
+  line-height: 100%;
+  border: 2px #fff solid;
+  border-radius: 60px;
+  background: #daa505;
+  transition:         0.1s linear;
+  -o-transition:      0.1s linear;
+  -ms-transition:     0.1s linear;
+  -moz-transition:    0.1s linear;
+  -webkit-transition: 0.1s linear;
+  opacity: 0;
+}
+
+button.send.selected:after {
+  opacity: 1;
+}
